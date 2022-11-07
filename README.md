@@ -10,3 +10,7 @@ setting a voice alarm rather than a alert box
 
 Issues:-
 currently i encountered a pause and replay issue
+
+
+
+https://naveensharma16.github.io/timer/
