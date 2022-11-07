@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&family=Roboto:wght@500&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+<META NAME="robots" CONTENT="noindex,nofollow">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Pomodoro app</title>
+</head>
+<body>
+  
+
+    <div class="watch-container">
+        <h1>Pomodoro</h1>
+
+        <div class="button-container">
+           <button class="active" value="pomo">Pomodoro</button>
+           <button class="" value="short">Short break</button>
+           <button class="" value="long">Long break</button>
+        </div>
+
+         <div class="clock-wrap">
+           
+              <svg class="progress-circle" width="280px" height="280px" xmlns="http://www.w3.org/2000/svg">
+                <circle class="progress-circle-back"
+		        cx="140" cy="140" r="128"></circle>
+                <circle class="progress-circle-prog"
+                cx="140" cy="140" r="128"></circle>
+              </svg>
+              
+              <div class="progress-text">
+                <h2>17.59</h2>
+                <p>START</p>
+              </div>
+         </div>
+
+
+        <div class="settings">
+            <button><img src="./images/setting.png" alt=""></button>
+        </div>
+    </div>
+    
+
+
+<div class="setting-modal" style="display: none;">
+  <div class="top-head">
+    <h3>Settings</h3>
+    <img src="./images/close.png" alt="">
+  </div>  
+
+  <div class="times-wrap">
+    <h5>TIME (MINUTES)</h5>
+
+    <div class="timer-seters">
+        <div class="single-time-set">
+            <label for="">Pomodoro</label>
+            <input type="number" name="" id="pomodoro" value="25">
+        </div>  
+        <div class="single-time-set">
+            <label for="">Short Break</label>
+            <input type="number" name="" id="shortbreak" value="5">
+        </div>  
+        <div class="single-time-set">
+            <label for="">Long Break</label>
+            <input type="number" name="" id="longbreak" value="15">
+        </div>  
+    </div>
+
+
+  </div>
+
+
+  <div class="fonts-wrap">
+    <h5>FONT</h5>
+    <div class="fonts-list">
+        <button class="active" value="'Roboto', sans-serif">Aa</button>
+        <button class="" value="'Inter Tight', sans-serif">Aa</button>
+        <button class="" value="'Work Sans', sans-serif">Aa</button>
+    </div>
+</div>
+
+
+<div class="colors-wrap">
+    <h5>COLOR</h5>
+    <div class="color-list">
+        <button class="active" value="#f36f6b"></button>
+        <button class="" value="#72f2f5"></button>
+        <button class="" value="#d783f5"></button>
+    </div>
+</div>
+
+
+<div class="apply-btn-wrap">
+    <button class="apply-btn">Apply</button>
+</div>
+
+
+
+</div>
+
+
+
+
+
+    <script src="./main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&family=Roboto:wght@500&family=Work+Sans:wght@500&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e2140;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.watch-container {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.watch-container h1 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+}
+.watch-container .button-container {
+  background-color: #151932;
+  border-radius: 25px;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.watch-container .button-container button {
+  outline: none;
+  padding: 10px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: unset;
+  color: #d1ccc0;
+  font-family: inherit;
+  font-size: 12px;
+}
+.watch-container .button-container button.active {
+  color: #151932;
+}
+.watch-container .clock-wrap {
+  background-color: #151932;
+  box-shadow: 0px 5px 20px 5px rgb(38, 43, 85);
+  border-radius: 50%;
+  height: 280px;
+  width: 288px;
+  position: relative;
+}
+.watch-container .clock-wrap .progress-circle {
+  transform: rotate(-90deg);
+  margin-top: 0px;
+}
+.watch-container .clock-wrap .progress-circle-back {
+  fill: none;
+  stroke: #151932;
+  stroke-width: 10px;
+}
+.watch-container .clock-wrap .progress-circle-prog {
+  fill: none;
+  stroke: #f36f6b;
+  stroke-width: 10px;
+  stroke-dasharray: 0 900;
+  stroke-dashoffset: 0px;
+  transition: stroke-dasharray 0.7s linear 0s;
+  stroke-linecap: round;
+}
+.watch-container .clock-wrap .progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.watch-container .clock-wrap .progress-text h2 {
+  color: #fff;
+  font-size: 60px;
+}
+.watch-container .clock-wrap .progress-text p {
+  color: #fff;
+  letter-spacing: 5px;
+}
+.watch-container .settings {
+  margin-top: 40px;
+}
+.watch-container .settings button {
+  outline: none;
+  background: unset;
+  border: none;
+  width: 20px;
+  cursor: pointer;
+}
+.watch-container .settings button img {
+  width: 100%;
+}
+
+.setting-modal {
+  background-color: #fff;
+  width: 380px;
+  height: 350px;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 0px;
+}
+.setting-modal .top-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px 10px;
+  border-bottom: 1px solid #95a5a6;
+  align-items: center;
+}
+.setting-modal .top-head h3 {
+  font-size: 22px;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+}
+.setting-modal .top-head img {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+.setting-modal .times-wrap {
+  padding: 15px 0px 15px;
+  margin: 0px 20px;
+  border-bottom: 1px solid #95a5a6;
+}
+.setting-modal .times-wrap h5 {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 3px;
+}
+.setting-modal .times-wrap .timer-seters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.setting-modal .times-wrap .timer-seters .single-time-set {
+  max-width: 30%;
+}
+.setting-modal .times-wrap .timer-seters .single-time-set label {
+  display: block;
+  font-size: 12px;
+  color: #95a5a6;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 5px;
+}
+.setting-modal .times-wrap .timer-seters .single-time-set input[type=number] {
+  width: 100%;
+  background-color: #ecf0f1;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.setting-modal .fonts-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px 15px;
+  margin: 0px 20px;
+  border-bottom: 1px solid #95a5a6;
+}
+.setting-modal .fonts-wrap h5 {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 3px;
+}
+.setting-modal .fonts-wrap button {
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.setting-modal .fonts-wrap button.active {
+  background-color: #151932;
+  color: #fff;
+}
+.setting-modal .fonts-wrap button:nth-child(1) {
+  font-family: "Roboto", sans-serif;
+}
+.setting-modal .fonts-wrap button:nth-child(2) {
+  font-family: "Inter Tight", sans-serif;
+}
+.setting-modal .fonts-wrap button:nth-child(3) {
+  font-family: "Work Sans", sans-serif;
+}
+.setting-modal .fonts-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px 15px;
+  margin: 0px 20px;
+  border-bottom: 1px solid #95a5a6;
+}
+.setting-modal .fonts-wrap h5 {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 3px;
+}
+.setting-modal .fonts-wrap button {
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+}
+.setting-modal .fonts-wrap button.active {
+  background-color: #151932;
+  color: #fff;
+}
+.setting-modal .fonts-wrap button:nth-child(1) {
+  font-family: "Roboto", sans-serif;
+}
+.setting-modal .fonts-wrap button:nth-child(2) {
+  font-family: "Inter Tight", sans-serif;
+}
+.setting-modal .fonts-wrap button:nth-child(3) {
+  font-family: "Work Sans", sans-serif;
+}
+.setting-modal .colors-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px 15px;
+  margin: 0px 20px;
+  border-bottom: 1px solid #95a5a6;
+}
+.setting-modal .colors-wrap h5 {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 3px;
+}
+.setting-modal .colors-wrap .color-list {
+  display: flex;
+  gap: 5px;
+}
+.setting-modal .colors-wrap button {
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+.setting-modal .colors-wrap button.active::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 8px;
+  background-image: url(./images/check.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 13px;
+  height: 13px;
+}
+.setting-modal .colors-wrap button:nth-child(1) {
+  background-color: #ff6d6d;
+}
+.setting-modal .colors-wrap button:nth-child(2) {
+  background-color: #72f2f5;
+}
+.setting-modal .colors-wrap button:nth-child(3) {
+  background-color: #d783f5;
+}
+.setting-modal .apply-btn-wrap {
+  position: relative;
+}
+.setting-modal .apply-btn-wrap .apply-btn {
+  outline: none;
+  padding: 10px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+}
+
+.animatemodal {
+  -webkit-animation-name: modalanimation;
+          animation-name: modalanimation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes modalanimation {
+  from {
+    top: 80%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+@keyframes modalanimation {
+  from {
+    top: 80%;
+  }
+  to {
+    top: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */
